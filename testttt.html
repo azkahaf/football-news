@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contoh Event onresize</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+    #info {
+      display: inline-block;
+      background-color: #e0f7fa;
+      padding: 20px;
+      border-radius: 10px;
+      font-size: 18px;
+      border: 2px solid #00acc1;
+    }
+  </style>
+</head>
+<body onresize="showResizeMessage()">
+  <h2>Contoh Event: onresize</h2>
+  <div id="info">
+    Ubah ukuran jendela browser untuk melihat respon!
+  </div>
+
+  <script>
+    function showResizeMessage() {
+      const w = window.innerWidth;
+      const h = window.innerHeight;
+      const infoBox = document.getElementById("info");
+      infoBox.innerHTML = `Ukuran jendela sekarang: ${w}px × ${h}px`;
+      infoBox.style.backgroundColor = "#b2ebf2";
+    }
+  </script>
+</body>
+</html>
